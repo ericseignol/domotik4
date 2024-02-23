@@ -4,7 +4,7 @@ var options = {
         'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
     },
 };
-fetch('http://192.168.1.97/dht', options).then((resp) => resp.json()).then(data => {
+fetch('http://192.168.1.22/dht', options).then((resp) => resp.json()).then(data => {
     if (data.temperature) {
         document.getElementsByClassName('temp')[0].getElementsByTagName('h4')[0].innerHTML = data.temperature + '°c';
     }
